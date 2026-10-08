@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -I./include
 
-SRCS = src/main.c src/monitor.c
+SRCS = src/main.c src/monitor.c src/process.c
 
 TARGET = larpos
 

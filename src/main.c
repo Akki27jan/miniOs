@@ -34,7 +34,10 @@ int main() {
                 fclose(fp);
                 printf("\n");
             }
-        } else if (strlen(input) > 0) {
+        }else if (strncmp(input, "run ", 4) == 0) {
+            runProg(input + 4);
+        }
+        else if (strlen(input) > 0) {
             printf("Unknown command: %s\n", input);
         }
     }
