@@ -1,25 +1,25 @@
-============================================================
-                  LarpOS Command Reference
-============================================================
+[35m============================================================[0m
+[1m[36m                  LarpOS Command Reference[0m
+[35m============================================================[0m
 
-General Commands:
-  larp          - Displays this comprehensive command reference.
-  clear         - Clears the terminal screen.
-  quit / exit   - Exits the MiniOS shell.
+[1m[33mGeneral Commands:[0m
+  [32mlarp[0m          - Displays this comprehensive command reference.
+  [32mclear[0m         - Clears the terminal screen.
+  [32mquit / exit[0m   - Exits the MiniOS shell.
 
-  system        - Reads from the /proc filesystem to display 
-                  current system uptime, idle time, and memory 
+  [32msystem[0m        - Reads from the /proc filesystem to display
+                  current system uptime, idle time, and memory
                   statistics (MemTotal, MemFree).
 
-  run <program> - Forks a new child process and uses execvp() to 
-                    execute a standard Linux program (like 'ls' or 
-                    'date') without crashing the main shell. The 
-                    parent process waits for the child to finish 
+  [32mrun[0m [34m<program>[0m - Forks a new child process and uses execvp() to
+                    execute a standard Linux program (like 'ls' or
+                    'date') without crashing the main shell. The
+                    parent process waits for the child to finish
                     using waitpid().
-  
-  submit <job>  - Submits a simulated task to a background worker.
-                  The worker process uses a pipe to send the 
+
+  [32msubmit[0m [34m<job>[0m  - Submits a simulated task to a background worker.
+                  The worker process uses a pipe to send the
                   completion status back to the main MiniOS shell.
-  jobs          - Lists the history of recently completed jobs
+  [32mjobs[0m          - Lists the history of recently completed jobs
                   submitted during this session.
-============================================================
+[35m============================================================[0m
