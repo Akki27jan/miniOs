@@ -1,0 +1,13 @@
+============================================================
+                  LarpOS Command Reference
+============================================================
+
+General Commands:
+  larp          - Displays this comprehensive command reference.
+  quit / exit   - Exits the MiniOS shell.
+
+  system        - Reads from the /proc filesystem to display 
+                  current system uptime, idle time, and memory 
+                  statistics (MemTotal, MemFree).
+
+============================================================
