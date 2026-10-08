@@ -4,6 +4,7 @@
 
 General Commands:
   larp          - Displays this comprehensive command reference.
+  clear         - Clears the terminal screen.
   quit / exit   - Exits the MiniOS shell.
 
   system        - Reads from the /proc filesystem to display 
