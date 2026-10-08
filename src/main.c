@@ -36,8 +36,13 @@ int main() {
             }
         }else if (strncmp(input, "run ", 4) == 0) {
             runProg(input + 4);
-        }
-        else if (strlen(input) > 0) {
+        }else if (strncmp(input, "submit ", 7) == 0) {
+            // input + 7 skips the word "submit " 
+            submit_job(input + 7);
+        } 
+        else if (strcmp(input, "jobs") == 0) {
+            list_jobs();
+        }else if (strlen(input) > 0) {
             printf("Unknown command: %s\n", input);
         }
     }

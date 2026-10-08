@@ -15,4 +15,10 @@ General Commands:
                     'date') without crashing the main shell. The 
                     parent process waits for the child to finish 
                     using waitpid().
+  
+  submit <job>  - Submits a simulated task to a background worker.
+                  The worker process uses a pipe to send the 
+                  completion status back to the main MiniOS shell.
+  jobs          - Lists the history of recently completed jobs
+                  submitted during this session.
 ============================================================
