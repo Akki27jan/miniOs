@@ -10,4 +10,9 @@ General Commands:
                   current system uptime, idle time, and memory 
                   statistics (MemTotal, MemFree).
 
+  run <program> - Forks a new child process and uses execvp() to 
+                    execute a standard Linux program (like 'ls' or 
+                    'date') without crashing the main shell. The 
+                    parent process waits for the child to finish 
+                    using waitpid().
 ============================================================
