@@ -23,6 +23,7 @@ int main() {
         } else if (strcmp(input, "system") == 0) {
             sysInfo();
         } else if (strcmp(input, "clear") == 0) {
+            // ANSI escape codes: move cursor to top-left, then clear the screen
             printf("\033[H\033[2J");
             fflush(stdout);
         } else if (strcmp(input, "larp") == 0) {
