@@ -46,6 +46,8 @@ int main() {
         } 
         else if (strcmp(input, "jobs") == 0) {
             list_jobs();
+        }else if (strcmp(input, "race") == 0) {
+            race_demo();
         }else if (strlen(input) > 0) {
             printf("Unknown command: %s\n", input);
         }
