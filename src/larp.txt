@@ -3,13 +3,15 @@
 [35m============================================================[0m
 
 [1m[33mGeneral Commands:[0m
-  [32mlarp[0m          - Displays this comprehensive command reference.
+  [32mlarp / help[0m   - Displays this comprehensive command reference.
   [32mclear[0m         - Clears the terminal screen.
   [32mquit / exit[0m   - Exits the MiniOS shell.
 
   [32msystem[0m        - Reads from the /proc filesystem to display
                   current system uptime, idle time, and memory
                   statistics (MemTotal, MemFree).
+  [32mprocesses[0m     - Lists every running process by reading the
+                  numbered folders in /proc (PID, state, memory, name).
 
   [32mrun[0m [34m<program>[0m - Forks a new child process and uses execvp() to
                     execute a standard Linux program (like 'ls' or
@@ -22,7 +24,12 @@
                   completion status back to the main MiniOS shell.
   [32mjobs[0m          - Lists the history of recently completed jobs
                   submitted during this session.
-  [32mrace[0m          - Starts 2 threads that both increment a shared counter
-                  with no synchronization, showing lost updates from
-                  a race condition.
+
+  [32mworkers[0m [34m[n][0m   - Starts n worker threads (default 3) that take 10
+                  jobs from a shared queue of 5 slots. Semaphores
+                  (empty, full, mutex) handle the full/empty queue.
+                  Try 1, 2, 4 and 8 workers and compare the times.
+  [32mrace[0m          - Starts 2 threads that both increment a shared
+                  counter, first with no synchronization (updates
+                  get lost), then protected by a semaphore.
 [35m============================================================[0m

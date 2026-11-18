@@ -22,6 +22,7 @@ void runProg(char *command) {
         return; 
     }
 
+    fflush(stdout); // so the child doesn't get a copy of unprinted output
     pid_t pid = fork();
 
     if (pid < 0) {

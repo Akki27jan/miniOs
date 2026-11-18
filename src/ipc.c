@@ -34,6 +34,7 @@ void submit_job(char *job_name) {
         return;
     }
 
+    fflush(stdout); // so the child doesn't get a copy of unprinted output
     pid_t pid = fork();
 
     if (pid < 0) {

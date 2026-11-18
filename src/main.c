@@ -22,11 +22,13 @@ int main() {
             break;
         } else if (strcmp(input, "system") == 0) {
             sysInfo();
+        } else if (strcmp(input, "processes") == 0) {
+            show_processes();
         } else if (strcmp(input, "clear") == 0) {
             // ANSI escape codes: move cursor to top-left, then clear the screen
             printf("\033[H\033[2J");
             fflush(stdout);
-        } else if (strcmp(input, "larp") == 0) {
+        } else if (strcmp(input, "larp") == 0 || strcmp(input, "help") == 0) {
             FILE *fp = fopen("src/larp.txt", "r");
             if (fp == NULL) {
                 perror("Not able to larp at this moment\n");
@@ -48,6 +50,11 @@ int main() {
             list_jobs();
         }else if (strcmp(input, "race") == 0) {
             race_demo();
+        }else if (strcmp(input, "workers") == 0) {
+            workers_demo(NULL);
+        }else if (strncmp(input, "workers ", 8) == 0) {
+            // input + 8 skips the word "workers "
+            workers_demo(input + 8);
         }else if (strlen(input) > 0) {
             printf("Unknown command: %s\n", input);
         }
