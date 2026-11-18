@@ -22,4 +22,7 @@
                   completion status back to the main MiniOS shell.
   [32mjobs[0m          - Lists the history of recently completed jobs
                   submitted during this session.
+  [32mrace[0m          - Starts 2 threads that both increment a shared counter
+                  with no synchronization, showing lost updates from
+                  a race condition.
 [35m============================================================[0m
