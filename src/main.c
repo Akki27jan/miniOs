@@ -10,7 +10,8 @@ int main() {
     printf("Type 'larp' to see all commands, or 'quit' to exit.\n");
 
     while (1) {
-        printf("LarpOS> ");
+        // blue "LarpOS", green ">", then reset so your typing stays normal
+        printf("\033[34mLarpOS\033[32m>\033[0m ");
         
         if (fgets(input, sizeof(input), stdin) == NULL) {
             break; 
